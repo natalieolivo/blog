@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><script src="/nomad-tech/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=nomad-tech/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+<title>Promises | Your Name - Digital Nomad | Tech | Life</title>
+<meta name="description" content="Sharing tech insights, recording nomad life, providing practical guides">
+
+
+<meta property="og:title" content="Promises | Your Name - Digital Nomad | Tech | Life">
+<meta property="og:description" content="Sharing tech insights, recording nomad life, providing practical guides">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1313/nomad-tech/tags/promises/">
+<meta property="og:site_name" content="Your Name - Digital Nomad | Tech | Life">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Promises | Your Name - Digital Nomad | Tech | Life">
+<meta name="twitter:description" content="Sharing tech insights, recording nomad life, providing practical guides">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Promises | Your Name - Digital Nomad | Tech | Life",
+  "url": "http:\/\/localhost:1313\/nomad-tech\/tags\/promises\/",
+  
+}
+</script>
+    
+
+<link rel="stylesheet" href="/nomad-tech/scss/main.min.a045342f62854cc4b1811229f4cd0ada7fa20440394c522a48f84c604d027419.css" integrity="sha256-oEU0L2KFTMSxgRIp9M0K2n&#43;iBEA5TFIqSPhMYE0CdBk=">
+
+
+
+<script src="/nomad-tech/js/main.min.1dc48d277f58c447b08394eeabd1a9c2ee6bacc162b90044cc98b07898af3d86.js" integrity="sha256-HcSNJ39YxEewg5Tuq9Gpwu5rrMFiuQBEzJiweJivPYY=" defer></script>
+    
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <div class="nav-container">
+            <a href="http://localhost:1313/nomad-tech/" class="logo" aria-label="Your Name - Digital Nomad | Tech | Life - Home">NOMAD-TECH</a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="http://localhost:1313/nomad-tech/" aria-current="false">首页</a></li>
+                <li><a href="http://localhost:1313/nomad-tech/social/" aria-current="false">社交媒体</a></li>
+                <li><a href="http://localhost:1313/nomad-tech/posts/" aria-current="false">博客</a></li>
+                <li><a href="http://localhost:1313/nomad-tech/portfolio/" aria-current="false">作品集</a></li>
+                <li><a href="http://localhost:1313/nomad-tech/about/" aria-current="false">关于</a></li>
+                <li><a href="http://localhost:1313/nomad-tech/travel/" aria-current="false">旅行</a></li>
+            </ul>
+            <div class="lang-switcher" role="group" aria-label="Language selection">
+                
+                <a href="http://localhost:1313/nomad-tech/" 
+                   class="lang-link active" 
+                   aria-label="Switch to " 
+                   aria-current="true">ZH</a>
+                
+                <a href="http://localhost:1313/nomad-tech/en/" 
+                   class="lang-link " 
+                   aria-label="Switch to " 
+                   >EN</a>
+                
+                <a href="http://localhost:1313/nomad-tech/fr/" 
+                   class="lang-link " 
+                   aria-label="Switch to " 
+                   >FR</a>
+                
+            </div>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </div>
+</nav>
+    <main id="main" role="main">
+        
+<div style="margin-top: 5rem; padding: 2rem; background: rgba(255, 255, 255, 0.02); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1);">
+    <h1 style="color: #00d4ff; margin-bottom: 2rem; text-align: center;">Promises</h1>
+    <div class="blog-posts">
+        
+        <article class="blog-post">
+            <h3>Modern JavaScript Async Patterns</h3>
+            <div class="blog-meta">2024年8月</div>
+            <p><h1 id="modern-javascript-async-patterns">Modern JavaScript Async Patterns</h1>
+<p>Exploring the evolution from callbacks to async/await and beyond.</p>
+<h2 id="promise-chains-vs-asyncawait">Promise Chains vs Async/Await</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Promise chains
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">fetchUser</span>(<span style="color:#a6e22e">id</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">fetchPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">posts</span> =&gt; <span style="color:#a6e22e">renderPosts</span>(<span style="color:#a6e22e">posts</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">handleError</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Async/await
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchUser</span>(<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">posts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">renderPosts</span>(<span style="color:#a6e22e">posts</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">handleError</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The async/await syntax makes asynchronous code much more readable!</p></p>
+            <a href="http://localhost:1313/nomad-tech/posts/javascript-async-patterns/" class="btn btn-secondary">阅读全文</a>
+        </article>
+        
+    </div>
+</div>
+
+    </main>
+    <footer style="background: rgba(0, 0, 0, 0.3); padding: 2rem 0; margin-top: 4rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container">
+        <p style="color: #888; margin: 0;">
+            Copyright © 2026 • Powered by <a href="https://github.com/m03315/nomad-tech" target="_blank" style="color: #00d4ff; text-decoration: none;">nomad-tech</a>(<a href="https://gohugo.io" target="_blank" style="color: #00d4ff; text-decoration: none;">Hugo</a>) • 
+            Made by <a href="https://github.com/m03315" target="_blank" style="color: #9d50bb; text-decoration: none;">m03315</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
