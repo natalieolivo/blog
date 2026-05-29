@@ -430,5 +430,43 @@
 &lt;p&gt;Customize this theme by editing your &lt;code&gt;hugo.toml&lt;/code&gt; configuration file.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/nomad-tech/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+       <author>me@m03315.top (m03315)</author>
+      <guid>http://localhost:1313/nomad-tech/about/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+&lt;p&gt;Hi! I&amp;rsquo;m a digital nomad and tech professional passionate about exploring the world while building amazing digital experiences.&lt;/p&gt;
+&lt;h2 id=&#34;my-journey&#34;&gt;My Journey&lt;/h2&gt;
+&lt;p&gt;Started my nomad journey in 2024, combining my love for technology with wanderlust. I&amp;rsquo;ve been exploring different cultures, working with amazing teams remotely, and documenting my experiences along the way.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-do&#34;&gt;What I Do&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Frontend Development&lt;/strong&gt;: Building modern, responsive web applications&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content Creation&lt;/strong&gt;: Sharing insights about nomad life and tech trends&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community Building&lt;/strong&gt;: Connecting with fellow nomads and tech enthusiasts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;current-focus&#34;&gt;Current Focus&lt;/h2&gt;
+&lt;p&gt;Currently based in Bali, working on exciting projects while enjoying the perfect blend of work and surf lifestyle.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Portfolio</title>
+      <link>http://localhost:1313/nomad-tech/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+       <author>me@m03315.top (m03315)</author>
+      <guid>http://localhost:1313/nomad-tech/portfolio/</guid>
+      <description>&lt;p&gt;A collection of projects I&amp;rsquo;ve built during my journey as a digital nomad and tech professional.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Travel Timeline</title>
+      <link>http://localhost:1313/nomad-tech/travel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+       <author>me@m03315.top (m03315)</author>
+      <guid>http://localhost:1313/nomad-tech/travel/</guid>
+      <description>&lt;p&gt;Follow my adventures as a digital nomad, exploring different cities and cultures while building amazing projects.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
