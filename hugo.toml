@@ -1,5 +1,5 @@
 baseURL = "https://natalieolivo.tech/"
-defaultContentLanguage = "zh"
+defaultContentLanguage = "en"
 theme = "nomad-tech"
 
 [pagination]
@@ -24,8 +24,8 @@ theme = "nomad-tech"
     weight = 3
 
 [params]
-  author = "m03315"
-  logo = "NOMAD-TECH"
+  author = "Nat"
+  logo = "RHYTHM TECH"
   subtitle = "Digital Nomad • Tech Explorer • Life Recorder"
   description = "Sharing tech insights, recording nomad life, providing practical guides"
 

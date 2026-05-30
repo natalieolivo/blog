@@ -3,7 +3,7 @@ title: "Social Media"
 description: "Connect with me across different platforms"
 ---
 
-# Follow My Journey
+# Follow My 
 
 Stay updated with my latest adventures, tech insights, and nomad life experiences across different social media platforms.
 
