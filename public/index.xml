@@ -430,5 +430,14 @@
 &lt;p&gt;Customize this theme by editing your &lt;code&gt;hugo.toml&lt;/code&gt; configuration file.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Portfolio</title>
+      <link>http://localhost:1313/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+       <author>me@m03315.top (Nat)</author>
+      <guid>http://localhost:1313/portfolio/</guid>
+      <description>&lt;p&gt;A collection of projects I&amp;rsquo;ve built during my journey as a digital nomad and tech professional.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

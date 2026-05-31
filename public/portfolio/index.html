@@ -6,27 +6,27 @@
     
 
 
-<title>作品集 | Your Name - Digital Nomad | Tech Insights | Life Stories</title>
-<meta name="description" content="展示我的项目和成就">
+<title>Portfolio | Your Name - Digital Nomad | Tech Insights | Life Stories</title>
+<meta name="description" content="Showcasing my projects and achievements">
 
 
-<meta property="og:title" content="作品集 | Your Name - Digital Nomad | Tech Insights | Life Stories">
-<meta property="og:description" content="展示我的项目和成就">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | Your Name - Digital Nomad | Tech Insights | Life Stories">
+<meta property="og:description" content="Showcasing my projects and achievements">
+<meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/portfolio/">
 <meta property="og:site_name" content="Your Name - Digital Nomad | Tech Insights | Life Stories">
 
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="作品集 | Your Name - Digital Nomad | Tech Insights | Life Stories">
-<meta name="twitter:description" content="展示我的项目和成就">
+<meta name="twitter:title" content="Portfolio | Your Name - Digital Nomad | Tech Insights | Life Stories">
+<meta name="twitter:description" content="Showcasing my projects and achievements">
 
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "作品集 | Your Name - Digital Nomad | Tech Insights | Life Stories",
+  "name": "Portfolio | Your Name - Digital Nomad | Tech Insights | Life Stories",
   "url": "http:\/\/localhost:1313\/portfolio\/",
   
 }
@@ -45,12 +45,89 @@
     <nav role="navigation" aria-label="Main navigation">
     <div class="container">
         <div class="nav-container">
+            <script>
+                const wrap = document.getElementById('vinyl-wrap');
+                const svg  = document.querySelector('.vinyl-svg');
+                let paused = false;
+
+                
+                wrap.addEventListener('mouseenter', () => svg.pauseAnimations());
+                wrap.addEventListener('mouseleave', () => svg.unpauseAnimations());
+
+                
+                wrap.addEventListener('touchstart', (e) => {
+                    e.preventDefault(); 
+                    if (paused) {
+                        svg.unpauseAnimations();
+                        paused = false;
+                    } else {
+                        svg.pauseAnimations();
+                        paused = true;
+                    }
+                });
+            </script>
+            <div class="vinyl-wrap">
+                <defs>
+                    <filter id="spin-blur">
+                        <feGaussianBlur stdDeviation="3 0"/>
+                    </filter>
+                </defs>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="vinyl-svg" width="200" height="200">
+                    <defs>
+                        
+                        <radialGradient id="gloss" cx="40%" cy="35%" r="60%">
+                          <stop offset="0%"   stop-color="white" stop-opacity="0.12"/>
+                          <stop offset="40%"  stop-color="white" stop-opacity="0.04"/>
+                          <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                        </radialGradient>
+                    
+                        
+                        <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+                          <stop offset="70%"  stop-color="black" stop-opacity="0"/>
+                          <stop offset="100%" stop-color="black" stop-opacity="0.5"/>
+                        </radialGradient>
+                      </defs>
+                    
+                  <g class="vinyl-spin" filter="url(#spin-blur)">
+                    <circle cx="150" cy="140" r="118" fill="#1a1a2e" stroke="#d8c9a8" stroke-width="1"/>
+                    <circle cx="150" cy="140" r="110" fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="102" fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="94"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="86"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="78"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="70"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="62"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="54"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    <circle cx="150" cy="140" r="46"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
+                    
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 150 140"
+                        to="360 150 140"
+                        dur="4s"
+                        repeatCount="indefinite"/>
+                  </g>
+            
+                  
+                  <circle cx="150" cy="140" r="38" fill="rgba(26, 26, 46, .95)"/>
+                  <text x="150" y="148" text-anchor="middle"
+                        font-family="Georgia, serif"
+                        font-size="20" font-style="italic" fill="#d8c9a8"
+                        letter-spacing="1">1979</text>
+            
+                        
+                    <circle cx="150" cy="140" r="118" fill="url(#gloss)" pointer-events="none"/>
+                    
+                    <circle cx="150" cy="140" r="118" fill="url(#vignette)" pointer-events="none"/>
+                </svg>
+            </div>
             <a href="http://localhost:1313/" class="logo" aria-label="Your Name - Digital Nomad | Tech Insights | Life Stories - Home">RHYTHM TECH</a>
             <ul class="nav-links" id="nav-menu">
-                <li><a href="http://localhost:1313/" aria-current="false">Teaching Statement | AI Curriculum | Work</a></li>
-                <li><a href="http://localhost:1313/social/" aria-current="false">Social Media</a></li>
+                <li><a href="http://localhost:1313/" aria-current="false">Work</a></li>
+                <li><a href="http://localhost:1313/social/" aria-current="false">Teaching Statement</a></li>
                 <li><a href="http://localhost:1313/posts/" aria-current="false">Blog</a></li>
-                <li><a href="http://localhost:1313/portfolio/" aria-current="false">Portfolio</a></li>
+                <li><a href="http://localhost:1313/portfolio/" aria-current="false">AI Curriculum</a></li>
                 <li><a href="http://localhost:1313/about/" aria-current="false">About</a></li>
                 <li><a href="http://localhost:1313/travel/" aria-current="false">Travel</a></li>
             </ul>
@@ -81,8 +158,8 @@
 <div style="margin-top: 5rem; padding: 2rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 1rem;">作品集</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;"><p>在我作为数字游民和技术专家的旅程中构建的项目集合。</p>
+            <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 1rem;">Portfolio</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;"><p>A collection of projects I&rsquo;ve built during my journey as a digital nomad and tech professional.</p>
 </p>
         </div>
         <div class="portfolio-grid">

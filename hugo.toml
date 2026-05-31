@@ -26,8 +26,8 @@ theme = "nomad-tech"
 [params]
   author = "Nat"
   logo = "RHYTHM TECH"
-  subtitle = "Digital Nomad • Tech Explorer • Life Recorder"
-  description = "Sharing tech insights, recording nomad life, providing practical guides"
+  subtitle = "AI Technologist, Teacher, Composer"
+  description = "Teaching philosophy, curriculum, code projects"
 
   # Analytics (optional)
   googleAnalytics = "G-2310RJEC91"
