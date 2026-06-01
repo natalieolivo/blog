@@ -1,0 +1,50 @@
+[home]
+other = "Inicio"
+[social]
+other = "Redes Sociales"
+[blog]
+other = "Blog"
+[portfolio]
+other = "Portfolio"
+[contact]
+other = "Contacto"
+[latest_blog]
+other = "Último Blog"
+[all_posts]
+other = "Todos"
+[read_more]
+other = "Leer Más"
+[prev_page]
+other = "Anterior"
+[next_page]
+other = "Siguiente"
+[date_format]
+other = "enero 2006"
+[date_format_full]
+other = "2 de enero de 2006"
+[about]
+other = "Sobre Mí"
+[travel]
+other = "Viajes"
+[hero_greeting]
+other = "Hola, soy"
+[follow_social]
+other = "Sígueme en Redes Sociales"
+[learn_more]
+other = "Saber Más"
+[social_description]
+other = "Compartiendo ideas y experiencias en diferentes plataformas"
+[portfolio_title]
+other = "Portfolio"
+[view_details]
+other = "Ver Detalles"
+[posts_count]
+other = "artículos"
+[all_categories]
+other = "Todas las Categorías"
+[view_posts]
+other = "Ver Artículos"
+[contact_email]
+other = "email.txt"
+[contact_wechat]
+other = "wechat.txt"
