@@ -6,7 +6,7 @@
                 .site-title {
                   font-family: 'Orbitron', sans-serif;
                   font-weight: 600;
-                  font-size: 2rem;
+                  font-size: 1.5rem;
                   letter-spacing: 0.15em;
                   color: #ffffff;
                   text-decoration: none;
@@ -15,17 +15,14 @@
             </style>
             <header class="site-header">
                 <a href="{{ .Site.BaseURL }}" aria-label="{{ .Site.Title }}" class="site-title">
-                  RHYTHM TECH
+                  RHYTHM + TECH
                 </a>
             </header>
             <ul class="nav-links" id="nav-menu">
-                <!-- <li><a href="{{ .Site.BaseURL }}" aria-current="false">{{ i18n "home" }}</a></li> -->
-                <li><a href="{{ .Site.BaseURL }}social/" aria-current="false">{{ i18n "social" }}</a></li>
-                <!-- <li><a href="{{ .Site.BaseURL }}posts/" aria-current="false">{{ i18n "blog" }}</a></li> -->
-                <li><a href="{{ .Site.BaseURL }}portfolio/" aria-current="false">{{ i18n "portfolio" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}about/" aria-current="false">{{ i18n "about" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}travel/" aria-current="false">{{ i18n "travel" }}</a></li>
-            </ul>
+                {{ range .Site.Menus.main }}
+                  <li><a href="{{ .URL }}" aria-current="false">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
             <div class="lang-switcher" role="group" aria-label="Language selection">
                 {{ range .Site.Languages }}
                 <a href="{{ if eq .Lang "zh" }}{{ $.Site.BaseURL }}{{ else }}{{ $.Site.BaseURL }}{{ .Lang }}/{{ end }}" 
