@@ -10,18 +10,49 @@ theme = "nomad-tech"
   tag = "tags"
 
 [languages]
-  [languages.zh]
-    languageCode = "zh-CN"
-    title = "Your Name - Digital Nomad | Tech | Life"
-    weight = 1
   [languages.en]
     languageCode = "en-US"
-    title = "Your Name - Digital Nomad | Tech Insights | Life Stories"
+    title = "Natalie Olivo - AI Technologist, Teacher, Composer"
+    weight = 1
+
+    [[languages.en.menu.main]]
+      name = "Teaching Statement"
+      url = "/teaching/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "AI Curriculum"
+      url = "/curriculum/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Travel"
+      url = "/travel/"
+      weight = 4
+
+  [languages.es]
+    languageCode = "es-US"
+    title = "Natalie Olivo - Nómada Digital | Tech | Vida"
     weight = 2
-  [languages.fr]
-    languageCode = "fr-FR"
-    title = "Your Name - Nomade Numérique | Tech | Vie"
-    weight = 3
+
+    [[languages.es.menu.main]]
+      name = "Declaración Docente"
+      url = "/teaching/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Currículo de IA"
+      url = "/curriculum/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Sobre Mí"
+      url = "/about/"
+      weight = 3
+    [[languages.es.menu.main]]
+      name = "Viajes"
+      url = "/travel/"
+      weight = 4
 
 [params]
   author = "Nat"
