@@ -1,8 +1,8 @@
 // Variables
 :root {
-  --primary-color: #00d4ff;
-  --secondary-color: #9d50bb;
-  --accent-color: #ff6b6b;
+  --primary-color: #d8c9a8;
+  --secondary-color: #0a0a0a;
+  --accent-color: #d8c9a8;
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a2e;
   --text-primary: #ffffff;
@@ -122,7 +122,6 @@ section {
 // Hero section
 .hero {
   display: flex;
-  align-items: center;
   justify-content: center;
   text-align: center;
   background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
@@ -153,7 +152,7 @@ section {
 .btn {
   padding: 12px 30px;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
@@ -166,14 +165,13 @@ section {
   }
   
   &:hover {
-    transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
   }
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .btn-secondary {

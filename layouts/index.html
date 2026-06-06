@@ -42,10 +42,16 @@
                       <stop offset="70%"  stop-color="black" stop-opacity="0"/>
                       <stop offset="100%" stop-color="black" stop-opacity="0.5"/>
                     </radialGradient>
+                    <!-- asymmetric sheen: rotates with disc making spin visible -->
+                    <linearGradient id="disc-sheen" gradientUnits="userSpaceOnUse" x1="32" y1="22" x2="268" y2="258">
+                      <stop offset="0%"   stop-color="#3a3a70"/>
+                      <stop offset="45%"  stop-color="#1a1a2e"/>
+                      <stop offset="100%" stop-color="#080812"/>
+                    </linearGradient>
                   </defs>
                 <!-- spinning part (rings only) -->
               <g class="vinyl-spin" filter="url(#spin-blur)">
-                <circle cx="150" cy="140" r="118" fill="#1a1a2e" stroke="#d8c9a8" stroke-width="1"/>
+                <circle cx="150" cy="140" r="118" fill="url(#disc-sheen)" stroke="#d8c9a8" stroke-width="1"/>
                 <circle cx="150" cy="140" r="110" fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
                 <circle cx="150" cy="140" r="102" fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
                 <circle cx="150" cy="140" r="94"  fill="none" stroke="#d8c9a8" stroke-width="1.2"/>
@@ -61,7 +67,7 @@
                     type="rotate"
                     from="0 150 140"
                     to="360 150 140"
-                    dur="4s"
+                    dur="2s"
                     repeatCount="indefinite"/>
               </g>
         
@@ -69,7 +75,7 @@
               <circle cx="150" cy="140" r="38" fill="rgba(26, 26, 46, .95)"/>
               <text x="150" y="148" text-anchor="middle"
                     font-family="Georgia, serif"
-                    font-size="20" font-style="italic" fill="#d8c9a8"
+                    font-size="18" font-style="italic" fill="#d8c9a8"
                     letter-spacing="1">1979</text>
         
                     <!-- gloss layer — sits on top, does not spin -->
