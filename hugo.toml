@@ -28,9 +28,13 @@ theme = "nomad-tech"
       url = "/about/"
       weight = 3
     [[languages.en.menu.main]]
+      name = "Composings"
+      url = "/Composings"
+      weight = 4
+    [[languages.en.menu.main]]
       name = "Travel"
       url = "/travel/"
-      weight = 4
+      weight = 5
 
   [languages.es]
     languageCode = "es-US"
@@ -50,9 +54,13 @@ theme = "nomad-tech"
       url = "/about/"
       weight = 3
     [[languages.es.menu.main]]
+      name = "Composiciones"
+      url = "/Composings"
+      weight = 4
+    [[languages.es.menu.main]]
       name = "Viajes"
       url = "/travel/"
-      weight = 4
+      weight = 5
 
 [params]
   author = "Nat"
