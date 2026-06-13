@@ -1,0 +1,28 @@
+.download-link {
+    display: block;
+    margin: 1rem 0;
+    color: var(--primary-color);
+    background: 0 0 no-repeat url('/images/icons/download_icon.png');
+    width: 2.2rem;
+    height: 2.2rem;
+    background-size: 2.2rem;
+    background-position: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    &:hover {
+        color: var(--secondary-color);
+    }
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+}
