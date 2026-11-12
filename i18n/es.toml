@@ -48,3 +48,6 @@ other = "Ver Artículos"
 other = "email.txt"
 [contact_wechat]
 other = "wechat.txt"
+
+[dark_mode]
+other = "Modo oscuro"

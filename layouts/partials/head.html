@@ -6,3 +6,6 @@
 {{ $js := resources.Get "js/main.js" }}
 {{ $jsMin := $js | resources.Minify | resources.Fingerprint }}
 <script src="{{ $jsMin.RelPermalink }}" integrity="{{ $jsMin.Data.Integrity }}" defer></script>
+
+{{ $toggle := resources.Get "js/theme-toggle.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $toggle.RelPermalink }}" integrity="{{ $toggle.Data.Integrity }}" defer></script>

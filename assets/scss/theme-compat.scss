@@ -1,0 +1,47 @@
+// The theme's travel and project templates carry hard-coded dark colors in
+// inline <style> blocks. The :root prefix outranks them without !important.
+:root {
+  .travel-timeline, .project-content {
+    background: var(--glass-bg);
+    border-color: var(--border-subtle);
+  }
+
+  .project-header { border-bottom-color: var(--border-subtle); }
+
+  .timeline-marker {
+    background: var(--surface);
+    border-color: var(--link);
+  }
+
+  .timeline-content { border-left-color: var(--link); }
+
+  .timeline-header h4,
+  .project-info h1,
+  .tech-stack h3,
+  .status-completed { color: var(--link); }
+
+  .timeline-date,
+  .project-type,
+  .project-body h2,
+  .highlight-tag,
+  .project-link { color: var(--purple); }
+
+  .project-meta,
+  .status-archived { color: var(--text-muted); }
+
+  .tech-tag {
+    background: var(--tint-strong);
+    color: var(--link);
+  }
+}
+
+// Theme templates also hard-code colors in style="" attributes, which only
+// !important can beat.
+[style*='#00d4ff'] { color: var(--link) !important; }
+[style*='#888'] { color: var(--text-muted) !important; }
+
+:root[data-theme='light'] .status-active { color: #1a7a2c; }
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .status-active { color: #1a7a2c; }
+}

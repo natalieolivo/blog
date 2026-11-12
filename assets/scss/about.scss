@@ -11,8 +11,8 @@
     border-radius: 10px;
     overflow: hidden;
     background: var(--bg-primary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0,212,255,.1);
+    box-shadow: 0 20px 40px var(--shadow);
+    border: 1px solid var(--glass-border);
 }
 
 .terminal-header {
@@ -20,7 +20,7 @@
     padding: 12px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    border-bottom: 1px solid var(--tint);
 }
 
 .terminal-buttons {
@@ -40,7 +40,7 @@
 .btn-maximize { background: #4c7b54; }
 
 .terminal-title {
-    color: #fff;
+    color: var(--text-primary);
     font-family: 'Monaco', 'Menlo', monospace;
     font-size: 0.9rem;
 }
@@ -59,28 +59,28 @@
 }
 
 .prompt {
-    color: #4c7b54;
+    color: var(--green);
     font-weight: bold;
 }
 
 .command {
-    color: #d8c9a8;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 .content {
-    color: #e0e0e0;
+    color: var(--text-body);
     margin: 1rem 0;
     
     h1 {
-        color: #4c7b54;
+        color: var(--green);
         font-size: 1.8rem;
         margin-bottom: 1rem;
         font-family: inherit;
     }
     
     h2 {
-        color: #d8c9a8;
+        color: var(--primary-color);
         font-size: 1.3rem;
         margin: 1.5rem 0 0.8rem 0;
         font-family: inherit;
@@ -91,14 +91,14 @@
     }
     
     strong {
-        color: #4c7b54;
+        color: var(--green);
     }
 }
 
 .contact-section {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-subtle);
 }
 
 .contact-grid {
@@ -110,11 +110,11 @@
     align-items: center;
     gap: 15px;
     padding: 8px 0;
-    color: #e0e0e0;
+    color: var(--text-body);
     transition: all 0.3s ease;
     
     &:hover {
-        background: rgba(0, 212, 255, 0.1);
+        background: var(--tint);
         padding-left: 10px;
         border-radius: 5px;
     }
@@ -126,13 +126,13 @@
 }
 
 .file-name {
-    color: #4c7b54;
+    color: var(--green);
     min-width: 120px;
     font-weight: bold;
 }
 
 .file-content {
-    color: #d8c9a8;
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
