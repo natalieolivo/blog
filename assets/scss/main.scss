@@ -1,15 +1,81 @@
 // Variables
+// Dark is the default. Light applies via data-theme="light", or via the OS
+// preference when no choice has been stored (also covers no-JS visitors).
+@mixin theme-light {
+  color-scheme: light;
+  --primary-color: #7a5c14;
+  --secondary-color: #2b2410;
+  --accent-color: #7a5c14;
+  --on-primary: #ffffff;
+  --bg-primary: #faf7f0;
+  --bg-secondary: #ece4d2;
+  --text-primary: #1d1b16;
+  --text-secondary: #5c5648;
+  --text-body: #2a2720;
+  --text-muted: #5c5648;
+  --glass-bg: rgba(0, 0, 0, 0.04);
+  --glass-bg-faint: rgba(0, 0, 0, 0.03);
+  --hover-glow: var(--shadow);
+  --hover-glow-soft: var(--shadow);
+  --on-gradient: #ffffff;
+  --glass-border: rgba(0, 0, 0, 0.14);
+  --border-subtle: rgba(0, 0, 0, 0.12);
+  --tint: rgba(11, 94, 122, 0.1);
+  --tint-strong: rgba(11, 94, 122, 0.18);
+  --nav-bg: #faf7f0;
+  --nav-mobile-bg: rgba(250, 247, 240, 0.98);
+  --surface: #ffffff;
+  --surface-header: #efe8d8;
+  --code-bg: #f3efe4;
+  --green: #35603d;
+  --link: #0b5e7a;
+  --purple: #7a3a96;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --footer-bg: rgba(0, 0, 0, 0.05);
+}
+
 :root {
+  color-scheme: dark;
   --primary-color: #d8c9a8;
   --secondary-color: #0a0a0a;
   --accent-color: #d8c9a8;
+  --on-primary: #0a0a0a;
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a2e;
   --text-primary: #ffffff;
   --text-secondary: #888;
+  --text-body: #e0e0e0;
+  --text-muted: #888;
   --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-faint: rgba(255, 255, 255, 0.02);
+  --hover-glow: rgba(0, 212, 255, 0.3);
+  --hover-glow-soft: rgba(0, 212, 255, 0.2);
+  --on-gradient: #ffffff;
   --glass-border: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --tint: rgba(0, 212, 255, 0.1);
+  --tint-strong: rgba(0, 212, 255, 0.2);
+  --nav-bg: #0a0a0a;
+  --nav-mobile-bg: rgba(26, 26, 46, 0.98);
+  --surface: #1a1a2e;
+  --surface-header: #16213e;
+  --code-bg: #0a0a0a;
+  --green: #4c7b54;
+  --link: #00d4ff;
+  --purple: #9d50bb;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --footer-bg: rgba(0, 0, 0, 0.3);
   --transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @include theme-light;
+  }
+}
+
+:root[data-theme='light'] {
+  @include theme-light;
 }
 
 // Base styles
@@ -38,7 +104,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0a0a0a;
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
@@ -98,7 +164,7 @@ nav {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -124,7 +190,7 @@ section {
   display: flex;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, var(--tint) 0%, transparent 50%);
   
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -165,13 +231,13 @@ section {
   }
   
   &:hover {
-    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 25px var(--hover-glow);
   }
 }
 
 .btn-primary {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--on-primary);
 }
 
 .btn-secondary {
@@ -245,12 +311,12 @@ section {
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 15px 30px var(--hover-glow-soft);
   }
 }
 
 .social-card {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(157, 80, 187, 0.1));
+  background: linear-gradient(135deg, var(--tint), rgba(157, 80, 187, 0.1));
   text-align: center;
 }
 
@@ -274,7 +340,7 @@ section {
     margin-bottom: 1rem;
     
     a {
-      color: #f0f0f0;
+      color: var(--text-primary);
       text-decoration: none;
       transition: var(--transition);
       
@@ -311,7 +377,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--on-gradient);
   font-size: 1.2rem;
 }
 
@@ -341,7 +407,7 @@ section {
 }
 
 .category-tag {
-  background: rgba(0, 212, 255, 0.2);
+  background: var(--tint-strong);
   padding: 2px 8px;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -368,8 +434,83 @@ section {
   
   &.active, &:hover {
     color: var(--primary-color);
-    background: rgba(0, 212, 255, 0.1);
+    background: var(--tint);
   }
+}
+
+// Footer
+.site-footer {
+  background: var(--footer-bg);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+
+  p {
+    color: var(--text-muted);
+    margin: 0;
+  }
+}
+
+// Theme toggle
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  // Shows the theme the button will switch to
+  .icon-sun { display: block; }
+  .icon-moon { display: none; }
+
+  &:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+}
+
+@mixin icon-light-state {
+  .theme-toggle .icon-sun { display: none; }
+  .theme-toggle .icon-moon { display: block; }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @include icon-light-state;
+  }
+}
+
+:root[data-theme='light'] {
+  @include icon-light-state;
 }
 
 // Particles
@@ -408,7 +549,7 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(26, 26, 46, 0.98);
+    background: var(--nav-mobile-bg);
     flex-direction: column;
     padding: 1rem 0;
     gap: 0;
@@ -422,6 +563,20 @@ section {
     }
   }
   
+  .nav-actions {
+    gap: 6px;
+  }
+
+  nav .site-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .nav-container {
+    gap: 0.5rem;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
@@ -447,6 +602,9 @@ section {
 
 // 404 page styles
 @import '404';
+
+// Overrides for the theme's inline-styled templates
+@import 'theme-compat';
 
 // Reduced motion
 @media (prefers-reduced-motion: reduce) {
